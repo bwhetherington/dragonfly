@@ -1,0 +1,3 @@
+// the configured options and settings for Dragonfly
+#define Dragonfly_VERSION_MAJOR @Dragonfly_VERSION_MAJOR@
+#define Dragonfly_VERSION_MINOR @Dragonfly_VERSION_MINOR@
