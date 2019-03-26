@@ -17,7 +17,11 @@ configure_file (
 include_directories("bin")
 
 # use sfml
-set(SFML_DIR "<sfml root prefix>/lib/cmake/SFML")
+if (WIN32)
+  set(SFML_DIR "C:/SFML-2.5.1-32/lib/cmake/SFML")
+else()
+  set(SFML_DIR "<sfml root prefix>/lib/cmake/SFML")
+endif()
 
 set(Dragonfly_SRC
     "src/main.hpp"
@@ -38,7 +42,7 @@ set(Dragonfly_SRC
     "src/math/Vec2.cpp"
 )
 
-find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
+find_package(SFML 2.5.1 COMPONENTS graphics audio REQUIRED)
 
 # Check if we're on Linux
 if(UNIX AND NOT APPLE)

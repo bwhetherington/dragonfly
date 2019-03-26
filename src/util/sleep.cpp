@@ -8,7 +8,7 @@ void df::milliSleep(int ms) { microSleep(ms * 1000); }
 
 #include <Windows.h>
 
-void df::microSleep(int microseconds) { Sleep(ms / 1000); }
+void df::microSleep(int microseconds) { Sleep(microseconds / 1000); }
 
 #elif __APPLE__ || __linux__
 

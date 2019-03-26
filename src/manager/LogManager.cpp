@@ -1,6 +1,7 @@
 #include "LogManager.hpp"
 #include <cstdarg>
 #include <cstdio>
+#include <ctime>
 
 using namespace df;
 

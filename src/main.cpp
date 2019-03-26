@@ -19,11 +19,11 @@ void shutDown(int s) {
 }
 
 void initializeInterruptHandler() {
-  struct sigaction action;
-  action.sa_handler = shutDown;
-  sigemptyset(&action.sa_mask);
-  action.sa_flags = 0;
-  sigaction(SIGINT, &action, NULL);
+  //struct sigaction action;
+  //action.sa_handler = shutDown;
+  //sigemptyset(&action.sa_mask);
+  //action.sa_flags = 0;
+  //sigaction(SIGINT, &action, NULL);
 }
 
 int main(int argc, char** argv) {
@@ -37,34 +37,11 @@ int main(int argc, char** argv) {
   log_manager.startUp();
   game_manager.startUp();
 
+  log_manager.info("Starting Dragonfly v%d.%d", Dragonfly_VERSION_MAJOR, Dragonfly_VERSION_MINOR);
+
   // Run the game loop
   game_manager.run();
 
   // Shut down
   shutDown(0);
-
-  // printf("Version: %d.%d\n", Dragonfly_VERSION_MAJOR,
-  // Dragonfly_VERSION_MINOR);
-
-  // sf::ContextSettings settings;
-  // settings.antialiasingLevel = 8;
-  // sf::RenderWindow window(sf::VideoMode(600, 600), "SFML works!",
-  //                         sf::Style::Default, settings);
-  // sf::CircleShape shape(100.f);
-  // shape.setPosition(100, 50);
-
-  // shape.setFillColor(sf::Color::Green);
-
-  // while (window.isOpen()) {
-  //   sf::Event event;
-  //   while (window.pollEvent(event)) {
-  //     if (event.type == sf::Event::Closed) window.close();
-  //   }
-
-  //   window.clear();
-  //   window.draw(shape);
-  //   window.display();
-  // }
-
-  return 0;
 }

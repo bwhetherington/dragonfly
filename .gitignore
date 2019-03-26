@@ -16,7 +16,17 @@ _deps
 
 # VSCode Stuff
 .vscode
+.vs
 
 # Ignore the compiled products
 bin
 Dragonfly
+
+# Windows stuff
+*.vcxproj
+*.sln
+*.vcxproj.*
+Win32
+Win64
+Debug
+Dragonfly.dir

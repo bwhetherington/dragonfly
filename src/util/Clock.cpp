@@ -6,7 +6,7 @@ using namespace df;
 Clock::Clock() { m_previous = microTime(); }
 
 Time Clock::delta() {
-  u_int64_t prev = m_previous;
+  Time prev = m_previous;
   m_previous = microTime();
   return prev;
 }

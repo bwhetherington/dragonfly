@@ -9,6 +9,8 @@ typedef uint64_t Time;
 // Produces the current system time in microseconds.
 Time microTime();
 
+
+
 namespace time {
 
 inline Time fromSeconds(int seconds) { return seconds * 1000000; }
